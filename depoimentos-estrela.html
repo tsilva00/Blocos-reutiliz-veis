@@ -1,0 +1,379 @@
+<style>
+
+#{{uniq}}{
+{{#background-color}}background-color:{{background-color}};{{/background-color}}
+{{#margin-top}}margin-top:{{margin-top}}px;{{/margin-top}}
+{{#margin-bottom}}margin-bottom:{{margin-bottom}}px;{{/margin-bottom}}
+}
+#{{uniq}} .img-base{
+	width:96px;
+	margin:0 auto;
+}
+#{{uniq}} h2 {
+	color: {{^cor_title}}#000{{/cor_title}}{{#cor_title}}{{cor_title}}{{/cor_title}};
+}
+#{{uniq}} h2 small {
+	color: {{^cor_descricao}}#000{{/cor_descricao}}{{#cor_descricao}}{{cor_descricao}}{{/cor_descricao}}
+}
+
+.fa-star:before{
+    content: "\f005";
+    color: #CBB74D;
+}
+
+.fa-star-o:before {
+    content: "\f006";
+	color: #CBB74D;
+}
+
+#{{uniq}} p.comment {
+    margin-top: 1cm;
+}
+#{{uniq}} .swiper-pagination{position:relative; width:100%;}
+#{{uniq}} .swiper-pagination-bullet {
+	width: 35px;
+	height: 2px;
+	margin:4px 5px;
+	border-radius:5px;
+	opacity:1;
+}
+#{{uniq}} .swiper-pagination-bullet-active {
+	opacity: 1;
+	background: black;
+	margin:0px 5px;
+	height: 10px;
+	width: 10px;
+}
+
+#{{uniq}} .swiper-slide { height: auto!important; }
+
+#{{uniq}} .swiper-slide .comment {
+	font-size:14px;
+}
+
+#{{uniq}} .swiper-slide .name {
+	font-size:14px;
+	font-weight:bold;
+}
+#{{uniq}} .swiper-slide .subtext{
+  	font-size:12px;
+    font-style:italic;
+    color:#aaa
+    }
+	span.estrela{
+	font-size:13px;
+	}
+
+	#{{uniq}} .swiper-slide.cincoestrela .umaestrela, .swiper-slide.cincoestrela .duasestrela, .swiper-slide.cincoestrela .tresestrela, .swiper-slide.cincoestrela .quatroestrela {
+    display: none;
+}
+
+	#{{uniq}} .swiper-slide.umaestrela .duasestrela, .swiper-slide.umaestrela .tresestrela, .swiper-slide.umaestrela .quatroestrela, .swiper-slide.umaestrela .cincoestrela {
+    display: none;
+}
+
+	#{{uniq}} .swiper-slide.duasestrela .umaestrela, .swiper-slide.duasestrela .tresestrela, .swiper-slide.duasestrela .quatroestrela, .swiper-slide.duasestrela .cincoestrela {
+    display: none;
+}
+
+	#{{uniq}} .swiper-slide.tresestrela .duasestrela, .swiper-slide.tresestrela .umaestrela, .swiper-slide.tresestrela .quatroestrela, .swiper-slide.tresestrela .cincoestrela {
+    display: none;
+}
+
+#{{uniq}} .swiper-slide.quatroestrela .umaestrela, .swiper-slide.quatroestrela .tresestrela, .swiper-slide.quatroestrela .duasestrela, .swiper-slide.quatroestrela .cincoestrela {     display: none; }
+
+.com.my-5.img-cover.img-circle {
+    display: none;
+}
+	}
+.block-title.col-xs-12.col-4.col-md-4.text-center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+	#{{uniq}} .swiper-button-next,#{{uniq}} .swiper-button-prev {
+	position: absolute;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	margin-top: 0;
+	color: black;
+	z-index: 15;
+}
+#{{uniq}} .swiper-button-next::after ,#{{uniq}} .swiper-button-prev::after {
+	font-size:25px;
+}
+</style>
+<!-- Swiper -->
+<div id="{{uniq}}" class="py-5 coment">
+	<div class="container">
+		<div class="row align-content-center justify-content-center">
+			<div class="block-title col-xs-12 col-10 col-md-4 text-center">
+				<h2>{{#pok_ms}}title{{/pok_ms}}<br>
+					<small>{{#pok_ms}}description{{/pok_ms}}</small>
+				</h2>
+			</div>
+			<div id="swiper-{{uniq}}" class="swiper-container swiper-container-{{uniq}}">
+			<div class="swiper-wrapper">
+				{{#nome2}}
+				<div class="swiper-slide {{avaliacao2}}">
+				   <div class="text-center p-5">
+					<div class="img-base">
+					  <div class="com my-5 img-cover img-circle" style="background-image:url('{{#rndCDN}}/media/{{imagem2}}{{/rndCDN}}');"></div>
+						<span class="txt_center estrela umaestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela duasestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela tresestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela quatroestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela cincoestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i></span>
+					</div>
+					  <p class="comment">{{#pok_ms}}texto2{{/pok_ms}}</p>
+					  <p class="name mb-5">{{nome2}}</p>
+					   <p class="subtext mb-5">{{#pok_ms}}subtexto2{{/pok_ms}}</p>
+				   </div>
+				</div>
+				{{/nome2}}
+				{{#nome3}}
+				<div class="swiper-slide {{avaliacao3}}">
+				   <div class="text-center p-5">
+					<div class="img-base">
+					  <div class="com my-5 img-cover img-circle" style="background-image:url('{{#rndCDN}}/media/{{imagem3}}{{/rndCDN}}');"></div>
+						<span class="txt_center estrela umaestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela duasestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela tresestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela quatroestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela cincoestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i></span>
+					</div>
+					  <p class="comment">{{#pok_ms}}texto3{{/pok_ms}}</p>
+					  <p class="name mb-5">{{nome3}}</p>
+					  <p class="subtext mb-5">{{#pok_ms}}subtexto3{{/pok_ms}}</p>
+				   </div>
+				</div>
+				{{/nome3}}
+				{{#nome4}}
+				<div class="swiper-slide {{avaliacao4}}">
+				   <div class="text-center p-5">
+					<div class="img-base">
+					  <div class="com my-5 img-cover img-circle" style="background-image:url('{{#rndCDN}}/media/{{imagem4}}{{/rndCDN}}');"></div>
+						<span class="txt_center estrela umaestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela duasestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela tresestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela quatroestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela cincoestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i></span>
+					</div>
+					  <p class="comment">{{#pok_ms}}texto4{{/pok_ms}}</p>
+					 <p class="name mb-5">{{nome4}}</p>
+					  <p class="subtext mb-5">{{#pok_ms}}subtexto4{{/pok_ms}}</p>
+				   </div>
+				</div>
+				{{/nome4}}
+				{{#nome5}}
+				<div class="swiper-slide {{avaliacao5}}">
+				   <div class="text-center p-5">
+					<div class="img-base">
+					  <div class="com my-5 img-cover img-circle" style="background-image:url('{{#rndCDN}}/media/{{imagem5}}{{/rndCDN}}');"></div>
+						<span class="txt_center estrela umaestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela duasestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela tresestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela quatroestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela cincoestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i></span>
+					</div>
+					  <p class="comment">{{#pok_ms}}texto5{{/pok_ms}}</p>
+					  <p class="name mb-5">{{nome5}}</p>
+					  <p class="subtext mb-5">{{#pok_ms}}subtexto5{{/pok_ms}}</p>
+				   </div>
+				</div>
+				{{/nome5}}
+				{{#nome6}}
+				<div class="swiper-slide {{avaliacao6}}">
+				   <div class="text-center p-5">
+					<div class="img-base">
+					  <div class="com my-5 img-cover img-circle" style="background-image:url('{{#rndCDN}}/media/{{imagem6}}{{/rndCDN}}');"></div>
+						<span class="txt_center estrela umaestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela duasestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela tresestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela quatroestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star-o"></i></span>
+						<span class="txt_center estrela cincoestrela">
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i>
+							<i class="fa fa-lg fa-star"></i></span>
+					</div>
+					  <p class="comment">{{#pok_ms}}texto6{{/pok_ms}}</p>
+					  <p class="name mb-5">{{nome6}}</p>
+					  <p class="subtext mb-5">{{#pok_ms}}subtexto6{{/pok_ms}}</p>
+				   </div>
+				</div>
+				{{/nome6}}
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row py-3 justify-content-center align-content-center" style="position:relative;">
+			{{^nav-arrow}}
+			<div class="swiper-button-next hidden-xs"></div>
+			<div class="swiper-button-prev hidden-xs"></div>
+			{{/nav-arrow}}
+			{{^nav-dots}}
+			<div class="mx-5 px-5 justify-content-center align-content-center swiper-pagination"></div>
+			{{/nav-dots}}
+		</div>
+	</div>
+</div>
+
+<script>
+requirejs(["swiper"], function (Swiper) {
+var swiper = new Swiper('.swiper-container-{{uniq}}', {
+	loop: true,
+	slidesPerView: 1,
+    spaceBetween: 5,
+	 navigation: {
+        nextEl: '#{{uniq}} .swiper-button-next',
+        prevEl: '#{{uniq}} .swiper-button-prev',
+      },
+	  watchOverflow: true,
+	  pagination: {
+        el: '#{{uniq}} .swiper-pagination',
+        clickable: true,
+      },
+	{{#autoplay}}
+	autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+	{{/autoplay}}
+	breakpoints: {
+        540: {
+          slidesPerView: {{#sc-sm}}{{sc-sm}}{{/sc-sm}}{{^sc-sm}}1{{/sc-sm}},
+        },
+        768: {
+          slidesPerView: {{#sc-sm}}{{sc-sm}}{{/sc-sm}}{{^sc-sm}}2{{/sc-sm}},
+        },
+        1024: {
+          slidesPerView: {{#sc-lg}}{{sc-lg}}{{/sc-lg}}{{^sc-lg}}3{{/sc-lg}},
+        },
+      }
+    });
+});
+</script>
