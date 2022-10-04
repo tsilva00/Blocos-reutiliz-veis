@@ -1,0 +1,74 @@
+<style>
+	#{{uniq}} {
+	    position: fixed;
+	    /*display: none;*/
+	    width: 25%;
+	    bottom: 0;
+	    z-index: 99;
+	    right: 0;
+	}
+
+	#{{uniq}} .alerta {
+	    background: #ffffff !important;
+	    padding: 25px;
+	    border-top-left-radius: 15px;
+	    padding-bottom: 18px;
+	    position: relative;
+	    box-shadow: 1px 1px 6px #666;
+		right: -100%;
+		-webkit-animation: right-to-left 1s linear forwards;
+		animation: right-to-left 1s linear forwards;
+	}
+
+	@-webkit-keyframes right-to-left{
+		from{right:-100%}
+		to{right:0%}
+	}
+
+	#{{uniq}} .alerta h2 {
+		font-size: 18px;
+    	margin-top: 0px;
+	}
+
+	#{{uniq}} .alerta p {
+	    font-size: 14px;
+    	margin: 0px;
+	}
+
+	#{{uniq}} button.close {
+	    position: absolute;
+	    background: #1d9ebd;
+	    opacity: 1;
+	    padding: 6px 10px;
+	    top: 0;
+	    right: 0;
+	    padding-top: 15px;
+	}
+
+	#{{uniq}} button.close span {
+	    text-shadow: none;
+	    color: white;
+	}
+
+	@media (max-width: 745px) {
+	#{{uniq}} {
+		width: 90%;
+	}
+}
+</style>
+
+<div id="{{uniq}}">
+	<div class="alerta" id="alert">
+		<h2>Também atendemos pelo chat!</h2>
+		<p>Agora também estamos no chat, para tirar dúvidas rápidas, caso queira falar com a gente, basta acessar o chat do sistema dentro do editor de site!</p>
+		<button type="button" class="close" id="close" onclick="closebutton()">
+			<span>×</span>
+		</button>
+	</div>
+</div>
+<script>
+	function closebutton() {
+		var x = document.getElementById("alert");
+         x.style.display = "none";
+	}
+</script>
